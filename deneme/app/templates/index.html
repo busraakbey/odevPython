@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+			<div class="body">
+				<div class="content-home">
+					<div>
+						<h3> Mimari tasarımlarınızda yapay zeka öğrenimi kullanarak hayal gücünüzün sınırlarını zorlayın.  </h3>
+						<p>
+							Yapay zeka, mimari projelerin tasarlanmasında örnekler sunabilir. Projenin ihtiyaçlarını analiz ederek en uygun malzemeleri seçebilir ve çevre faktörlerini göz önünde bulundurarak enerji verimli binalar tasarlayabilir. Güneş açısını, doğal ışık kaynaklarını ve yalıtım malzemelerini kullanarak verimliliği artırabilir. Yapay zeka, mimari projelerin daha hızlı, verimli ve etkileyici olmasına yardımcı olabilir.
+						</p>
+					</div>
+					<div class="featured">
+						<img src="/static/images/bed.jpg" alt="">
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="{{ url_for('Projects') }}"><img src="static/images/bg-projects.jpg" alt=""></a>
+								<h4><a href="{{ url_for('Projects') }}">Projeler</a></h4>
+								<h3><a href="{{ url_for('Projects') }}">Soul Lounge Music Studio</a></h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam eleifend leo, id accumsan ligula mattis quis. Duis commodo dapibus enim, sit amet facilisis eros rhoncus venenatis.
+								</p>
+								<a href="{{ url_for('Projects') }}">View More Projects</a>
+							</li>
+							<li>
+								<a href="{{ url_for('Projects') }}"><img src="static/images/bg-blog.jpg" alt=""></a>
+								<h4><a href="{{ url_for('Projects') }}">Projeler</a></h4>
+								<h3><a href="{{ url_for('Projects') }}">Best Paint To Use In The Kitchen</a></h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam eleifend leo, id accumsan ligula mattis quis. Duis commodo dapibus enim, sit amet facilisis eros rhoncus venenatis.
+								</p>
+								<a href="{{ url_for('Projects') }}">View More Blog Posts</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+{% endblock %}
+
+</body>
+</html>

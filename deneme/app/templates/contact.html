@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+<div class="body">
+				<div class="content-contact">
+					<div>
+						<div>
+							<h3>İletİşİm Formu</h3>
+                            <p>
+                                Merhaba! Sitemize hoş geldiniz. Bu web sitesi, yapay zeka öğrenimi teknolojisiyle mimari projelerinizi tasarlamanızı sağlar. Siz de kendi mimari hayallerinizi gerçekleştirmek için sitemizi ziyaret edebilirsiniz. Mimari tasarım ve yapay zeka öğrenimi hakkında uzman ekibimizle iletişim kurarak fikir alışverişi yapabilirsiniz. Hemen sitemizi keşfedin ve yapay zeka ile mimari tasarımlarınızda sınırlarınızı zorlayın.
+                            </p>
+							<form action="{{ url_for('Index') }}">
+								<h4>Bize Mesaj Gönderin</h4>
+								<input type="text" value="İsim *" onblur="this.value=!this.value?'Name *':this.value;" onfocus="this.select()" onclick="this.value='';">
+								<input type="text" value="Email *" onblur="this.value=!this.value?'Email Address *':this.value;" onfocus="this.select()" onclick="this.value='';">
+								<input type="text" value="Telefon Numarası" onblur="this.value=!this.value?'Phone Number':this.value;" onfocus="this.select()" onclick="this.value='';">
+								<textarea name="comment" id="comment" cols="30" rows="10" onblur="this.value=!this.value?'Your Comment':this.value;" onfocus="this.select()" onclick="this.value='';">Yorum giriniz...</textarea>
+								<input type="submit" class="submit" value="Mesaj Gönder">
+							</form>
+						</div>
+						<div class="sidebar">
+							<h3>İletişim Bilgileri</h3>
+							<span>Adres</span>
+							<p>
+								3933. Cad. <br> Ankara, Türkiye
+							</p>
+							<span>Bizimle iletişime geçin</span>
+							<p>
+								Telefon: 506 xxxxxxx <br> Email: <a href="@">info@architects.com</a>
+							</p>
+							<span>Ofis Saatleri</span>
+							<p>
+								Pazartesi-Cuma <br> 9:00-17:00 <br><br> Cumartesi <br> 9:00-12:00  <br>
+							</p>
+						</div>
+					</div>
+				</div>
+{% endblock %}

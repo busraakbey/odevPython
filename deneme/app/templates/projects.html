@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+<div class="body">
+				<div class="content-project">
+					<div>
+						<h3>Projeler</h3>
+					</div>
+					<div class="navigation">
+
+						<ul>
+							<li class="selected">
+								<a href="#">Hepsi</a>
+							</li>
+							<li>
+								<a href="{{ url_for ('Projects') }}">Oturma Odası</a>
+							</li>
+							<li>
+								<a href="{{ url_for ('Projects') }}">Yemek Odası</a>
+							</li>
+							<li>
+								<a href="{{ url_for ('Projects') }}">Yatak Odası</a>
+							</li>
+							<li>
+								<a href="{{ url_for ('Projects') }}">Banyo</a>
+							</li>
+							<li>
+								<a href="{{ url_for ('Landscaping') }}">Peyzaj Düzenleme</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="{{ url_for ('Projects') }}"><img src="static/images/project-gallery1.jpg" alt=""></a> <span><a href="living-room.html">Purple Hues Modern Living Room</a></span>
+							</li>
+							<li>
+								<a href="{{ url_for ('Projects') }}"><img src="static/images/project-gallery2.jpg" alt=""></a> <span><a href="dining-room.html">Warm And Cozy Modern Dining Room</a></span>
+							</li>
+							<li>
+								<a href="{{ url_for ('Projects') }}"><img src="static/images/project-gallery3.jpg" alt=""></a> <span><a href="toned-bedroom.html">Clean And Simple Earth Toned Master Bedroom</a></span>
+							</li>
+							<li>
+								<a href="{{ url_for ('Projects') }}"><img src="static/images/project-gallery4.jpg" alt=""></a> <span><a href="kids-bedroom.html">Unisex Kids Bedroom</a></span>
+							</li>
+							<li>
+								<a href="{{ url_for ('Projects') }}"><img src="static/images/project-gallery5.jpg" alt=""></a> <span><a href="bathroom.html">Victorian Bathroom With Makeup Area</a></span>
+							</li>
+							<li>
+								<a href="{{ url_for ('Landscaping') }}"><img src="static/images/project-gallery6.jpg" alt=""></a> <span><a href="{{ url_for ('Landscaping') }}">Spanish Influenced Garden</a></span>
+							</li>
+						</ul>
+						<div class="paging">
+							<ul>
+								<li class="selected">
+									<a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">></a>
+								</li>
+							</ul>
+							<span>Sayfa 1/2</span>
+						</div>
+					</div>
+				</div>
+
+{% endblock %}

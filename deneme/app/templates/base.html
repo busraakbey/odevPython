@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Mimari Projeleri Yapay Zeka ile Keşfedin</title>
+	<link rel="stylesheet" href="static/css/style.css" type="text/css">
+</head>
+<body>
+<div id="background-green">
+		background
+	</div>
+	<div class="page">
+		<div class="home-page">
+			<div class="sidebar">
+				<!Python kodlarını ekleriz. Yönlendireleceği adres.>
+				<a href="{{ url_for('Index') }}" id="logo"><img src="static/images/logo.png" alt="logo"></a>
+				<ul>
+					<li class="selected home">
+						<a href="{{ url_for('Index') }}">Anasayfa</a>
+					</li>
+					<li class="about">
+						<a href="{{ url_for('About') }}">Hakkında</a>
+					</li>
+					<li class="projects">
+						<a href="{{ url_for('Projects') }}">Projeler</a>
+					</li>
+					<li class="blog">
+						<a href="{{ url_for('ContactList') }}">I-Listesi</a>
+					</li>
+					<li class="contact">
+						<a href="{{ url_for('Contact') }}">Iletişim</a>
+					</li>
+					{% if login_auth == False %}
+					<li class="contact">
+						<a href="{{ url_for('Login') }}">Giriş Yap</a>
+					</li>
+					{% else %}
+					<li class="contact">
+						<a href="{{ url_for('Logout') }}" class = "buton alt"> {{ email }} - Çıkış Yap</a>
+					</li>
+					{% endif %}
+				</ul>
+				<div class="connect">
+					<a href="http://freewebsitetemplates.com/go/facebook/" id="fb">facebook</a> <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a> <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">google+</a> <a href="http://freewebsitetemplates.com/go/youtube/" id="youtube">youtube</a>
+				</div>
+			</div>
+
+			{% block body_content %}
+			<! body content eklenecek kısım >
+			{% endblock %}
+<div class="footer">
+					<p>
+						&#169; 2023 Created By Team Back End Ekibi
+					</p>
+					<ul>
+						<li>
+							<a href="{{ url_for('Index') }}">Anasayfa</a>
+						</li>
+						<li>
+							<a href="{{ url_for('About') }}">Hakkında</a>
+						</li>
+						<li>
+							<a href="{{ url_for('Projects') }}">Projeler</a>
+						</li>
+						<li>
+							<a href="{{ url_for('ContactList') }}">İletişim Listesi</a>
+						</li>
+						<li>
+							<a href="{{ url_for('Contact') }}">İletişim</a>
+						</li>
+					</ul>
+				</div>
+</body>
+</html>
